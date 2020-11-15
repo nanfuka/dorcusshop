@@ -1,0 +1,100 @@
+@model IEnumerable<Boutiq_api.Models.Boutiq>
+
+
+<style>
+    table {
+        background-color: rgb(229, 229, 243)
+    }
+
+    .ml2 {
+        font-weight: 900;
+        font-size: 3.5em;
+    }
+
+        .ml2 .letter {
+            display: inline-block;
+            line-height: 1em;
+        }
+</style>
+
+<h4 class="text-center text-uppercase">MY MONTHLY REPORT</h4>
+
+<p>
+    <a asp-action="New" class="btn btn-sm btn-warning rounded-0 text-uppercase">
+        <i class="fas fa-plus-circle"></i> NO. Items sold: @ViewBag.monthlySales
+    </a>
+
+    <a asp-action="New" class="btn btn-sm btn-danger rounded-0 text-uppercase">
+        <i class="fas fa-plus-circle"></i> Total Sales: Ushs.@Model.Sum(i => i.SalePrice)
+    </a>
+
+    <a asp-action="New" class="btn btn-sm btn-success rounded-0 text-uppercase">
+        <i class="fas fa-plus-circle"></i> Total profits: Ushs.@Model.Sum(i => i.Profit)
+    </a>
+
+    <a asp-action="New" class="btn btn-sm btn-info rounded-0 text-uppercase">
+        <i class="fas fa-plus-circle"></i> Weekly Reports
+    </a>
+
+    <a asp-action="New" class="btn btn-sm btn-danger rounded-0 text-uppercase">
+        <i class="fas fa-plus-circle"></i> Monthly Reports
+    </a>
+
+</p>
+
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+
+            <th>@Html.DisplayNameFor(model => model.Type)</th>
+
+            @* <th>@Html.DisplayNameFor(model => model.Description)</th> *@
+            <th>@Html.DisplayNameFor(model => model.Cost)</th>
+            <th>@Html.DisplayNameFor(model => model.DateOfEntry)</th>
+            <th>@Html.DisplayNameFor(model => model.status)</th>
+            <th>Action</th>
+
+
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employee in Model)
+        {
+            <tr>
+                <td>
+                    <img src="~/images/@employee.itemImage" class="rounded-circle" height="40" width="40"
+                         asp-append-version="true" />
+
+                </td>
+                <td>@employee.Type</td>
+                @* <td>@employee.Description</td> *@
+                <td>@employee.Cost</td>
+                <td>@employee.DateOfEntry</td>
+                <td>@employee.status</td>
+
+                <td>
+                    <a asp-action="Edit" asp-route-id="@employee.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@employee.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@employee.Id">Delete</a>
+                </td>
+
+            </tr>
+        }
+
+
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+

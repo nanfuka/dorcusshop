@@ -8625,11 +8625,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kalun\\Documents\\personalsites\\dotnetshop\\Boutiq-api\\MvcCoreUploadAndDisplayImage_Demo.csproj",
+      "projectUniqueName": "C:\\Users\\kalun\\Documents\\personalsites\\dorcusshop\\MvcCoreUploadAndDisplayImage_Demo.csproj",
       "projectName": "MvcCoreUploadAndDisplayImage_Demo",
-      "projectPath": "C:\\Users\\kalun\\Documents\\personalsites\\dotnetshop\\Boutiq-api\\MvcCoreUploadAndDisplayImage_Demo.csproj",
+      "projectPath": "C:\\Users\\kalun\\Documents\\personalsites\\dorcusshop\\MvcCoreUploadAndDisplayImage_Demo.csproj",
       "packagesPath": "C:\\Users\\kalun\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kalun\\Documents\\personalsites\\dotnetshop\\Boutiq-api\\obj\\",
+      "outputPath": "C:\\Users\\kalun\\Documents\\personalsites\\dorcusshop\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

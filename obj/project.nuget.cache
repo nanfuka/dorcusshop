@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "z0NSANbT/zwO2tCUm51SGTGkO17cVng4FeT37DS0F87xDIpmjFs9ot1/8WAePGY2t12Rfw6lzV6x8snvNwyE5A==",
+  "dgSpecHash": "OBOQpSxTqDqRIGIXdLCeOl8YLb2YVsVn4iGw1EGdVYBHAfGOGJCDnsWw1ghGolSY7/IixIBvfJYMkdaJJPAYZQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\kalun\\Documents\\personalsites\\dotnetshop\\Boutiq-api\\MvcCoreUploadAndDisplayImage_Demo.csproj",
+  "projectFilePath": "C:\\Users\\kalun\\Documents\\personalsites\\dorcusshop\\MvcCoreUploadAndDisplayImage_Demo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kalun\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.1\\microsoft.aspnetcore.cryptography.internal.3.1.1.nupkg.sha512",
     "C:\\Users\\kalun\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.1\\microsoft.aspnetcore.cryptography.keyderivation.3.1.1.nupkg.sha512",

@@ -57,6 +57,7 @@ namespace MvcCoreUploadAndDisplayImage_Demo.Controllers
         public async Task<IActionResult> GetSoldStalk()
         {
             var products = dbContext.Boutiq.Where(p => p.status == "sold");
+            ViewBag.sold = products.Count();
 
             return View(products);
         }
@@ -65,6 +66,7 @@ namespace MvcCoreUploadAndDisplayImage_Demo.Controllers
         public async Task<IActionResult> GetAllTshirtsSold()
         {
             var products = dbContext.Boutiq.Where(p => p.Type == "tshirt" && p.status == "sold");
+            ViewBag.soldTshirts = products.Count();
             return View(products);
         }
 
@@ -73,6 +75,7 @@ namespace MvcCoreUploadAndDisplayImage_Demo.Controllers
         public async Task<IActionResult> GetAllDeposited()
         {
             var products = dbContext.Boutiq.Where(p => p.status == "deposited");
+            ViewBag.depositedOn = products.Count();
             return View(products);
         }
 
@@ -81,6 +84,7 @@ namespace MvcCoreUploadAndDisplayImage_Demo.Controllers
         public async Task<IActionResult> GetAllPantsSold()
         {
             var products = dbContext.Boutiq.Where(p => p.Type == "pants" && p.status == "sold");
+            ViewBag.pantsSold = products.Count();
             return View(products);
         }
 
@@ -88,6 +92,7 @@ namespace MvcCoreUploadAndDisplayImage_Demo.Controllers
         public async Task<IActionResult> GetAllPantsInShop()
         {
             var products = dbContext.Boutiq.Where(p => p.Type == "pants" && p.status == "inShop");
+            ViewBag.pantsInShop = products.Count();
             return View(products);
         }
 
@@ -96,6 +101,7 @@ namespace MvcCoreUploadAndDisplayImage_Demo.Controllers
         public async Task<IActionResult> GetAllJeansSold()
         {
             var products = dbContext.Boutiq.Where(p => p.Type == "Jean" && p.status == "sold");
+            ViewBag.jeansSold = products.Count();
             return View(products);
         }
 
@@ -103,6 +109,7 @@ namespace MvcCoreUploadAndDisplayImage_Demo.Controllers
         public async Task<IActionResult> GetAllJeansInShop()
         {
             var products = dbContext.Boutiq.Where(p => p.Type == "Jean" && p.status == "inShop");
+            ViewBag.jeansInShop = products.Count();
             return View(products);
         }
 
@@ -111,6 +118,7 @@ namespace MvcCoreUploadAndDisplayImage_Demo.Controllers
         public async Task<IActionResult> GetAllLeggingsSold()
         {
             var products = dbContext.Boutiq.Where(p => p.Type == "leggings" && p.status == "sold");
+            ViewBag.leggingsSold = products.Count();
             return View(products);
         }
 
@@ -120,6 +128,7 @@ namespace MvcCoreUploadAndDisplayImage_Demo.Controllers
         public async Task<IActionResult> GetAllLeggingsInShop()
         {
             var products = dbContext.Boutiq.Where(p => p.Type == "leggings" && p.status == "inShop");
+            ViewBag.leggingsInShop = products.Count();
             return View(products);
         }
 
@@ -127,6 +136,7 @@ namespace MvcCoreUploadAndDisplayImage_Demo.Controllers
         public async Task<IActionResult> GetAllTopsSold()
         {
             var products = dbContext.Boutiq.Where(p => p.Type == "top" && p.status == "sold");
+            ViewBag.topsSold = products.Count();
             return View(products);
         }
 
@@ -134,6 +144,7 @@ namespace MvcCoreUploadAndDisplayImage_Demo.Controllers
         public async Task<IActionResult> GetAllTopsInShop()
         {
             var products = dbContext.Boutiq.Where(p => p.Type == "top" && p.status == "inShop");
+            ViewBag.topsInShop = products.Count();
             return View(products);
         }
 
@@ -141,6 +152,7 @@ namespace MvcCoreUploadAndDisplayImage_Demo.Controllers
         public async Task<IActionResult> GetAllJUmpSuitsSold()
         {
             var products = dbContext.Boutiq.Where(p => p.Type == "jumpsuit" && p.status == "sold");
+            ViewBag.soldJumpsuits = products.Count();
             return View(products);
         }
 
@@ -148,6 +160,7 @@ namespace MvcCoreUploadAndDisplayImage_Demo.Controllers
         public async Task<IActionResult> GetAllJumpSuitsInShop()
         {
             var products = dbContext.Boutiq.Where(p => p.Type == "jumpsuit" && p.status == "inShop");
+            ViewBag.jumpsuitsInShop = products.Count();
             return View(products);
         }
 
@@ -156,6 +169,7 @@ namespace MvcCoreUploadAndDisplayImage_Demo.Controllers
         public async Task<IActionResult> GetAllTwoPieceSold()
         {
             var products = dbContext.Boutiq.Where(p => p.Type == "twopiece" && p.status == "sold");
+            ViewBag.twoPiecesSold = products.Count();
             return View(products);
         }
 
@@ -163,6 +177,7 @@ namespace MvcCoreUploadAndDisplayImage_Demo.Controllers
         public async Task<IActionResult> GetAllTwoPieceInShop()
         {
             var products = dbContext.Boutiq.Where(p => p.Type == "twopiece" && p.status == "inShop");
+            ViewBag.twoPiecesInShop = products.Count();
             return View(products);
         }
 
@@ -170,6 +185,7 @@ namespace MvcCoreUploadAndDisplayImage_Demo.Controllers
         public async Task<IActionResult> GetAllDressesSold()
         {
             var products = dbContext.Boutiq.Where(p => p.Type == "dress" && p.status == "sold");
+            ViewBag.dressesSold = products.Count();
             return View(products);
         }
 
@@ -177,6 +193,7 @@ namespace MvcCoreUploadAndDisplayImage_Demo.Controllers
         public async Task<IActionResult> GetAllDressesInShop()
         {
             var products = dbContext.Boutiq.Where(p => p.Type == "dress" && p.status == "inShop");
+            ViewBag.dressesInShop = products.Count();
             return View(products);
         }
 
@@ -189,12 +206,14 @@ namespace MvcCoreUploadAndDisplayImage_Demo.Controllers
         public async Task<IActionResult> GetAllTshirtsInShop()
         {
             var products = dbContext.Boutiq.Where(p => p.Type == "tshirt" && p.status == "inShop");
+            ViewBag.tshirtsInShop = products.Count();
             return View(products);
         }
 
         public async Task<IActionResult> Indexs()
         {
             var employee = await dbContext.Boutiq.ToListAsync();
+            
             return View(employee);
         }
 
